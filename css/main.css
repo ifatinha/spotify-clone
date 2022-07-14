@@ -1,0 +1,726 @@
+/*Configurações Gerais*/
+:root {
+    --black: #191414;
+    --blue: #3d91f4;
+    --dark-green: #1db954;
+    --gray: #b3b3b3;
+    --light-black: #282828;
+    --light-green: #1ed760;
+    --light-white: #f6f6f6;
+    --white: #ffffff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Formatando Scrollbar*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light-black);
+    color: var(--gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray);
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+    background: var(--light-white);
+} */
+
+a.btnPlay {
+    background-color: #1db954;
+    border-radius: 27px;
+    color: var(--black);
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    height: 54px;
+    line-height: 55px;
+    text-align: center;
+    transition: filter 250ms;
+    width: 54px;
+}
+
+a.btnPlay:hover {
+    filter: brightness(110%);
+    transform: translateY(-1px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+a.linkVerMais {
+    border: 1px solid transparent;
+    color: var(--gray);
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+a.linkVerMais:hover {
+    border-bottom: 1px solid var(--gray);
+}
+
+hr {
+    background-color: var(--light-black);
+    color: var(--gray);
+    border: none;
+    content: "";
+    height: 1px;
+    margin-top: 20px;
+}
+
+/***************/
+
+/*Configuração do Flex*/
+.containerFlex {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+/**************/
+
+/*SideBar CSS*/
+.sideBar {
+    align-items: center;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 15%;
+}
+
+.sideBar a {
+    color: var(--gray);
+    cursor: pointer;
+    font-weight: bolder;
+    transition: 0.4s;
+}
+
+.sideBar a:hover {
+    color: var(--white);
+}
+
+.sideBar .sideBarMenuTop {
+    height: 45%;
+    padding: 5%;
+    width: 100%;
+}
+
+.sideBar .sideBarMenuTop .logo {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.sideBar .sideBarLista {
+    padding: 0 7%;
+}
+
+.sideBar .sideBarLista li {
+    margin-bottom: 15px;
+}
+
+.sideBar .sideBarLista li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sideBar .sideBarMenuBottom {
+    height: 38%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.sideBar .sideBarMenuBottom ul li {
+    line-height: 25px;
+    padding: 0 12%;
+}
+
+.sideBar .sideBarMenuBottom li a {
+    display: inline-block;
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sideBar .sideBarBtnDownload {
+    padding: 4% 10%;
+    height: 10%;
+    width: 100%;
+}
+
+.sideBar .sideBarBtnDownload i {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+/***********/
+
+/*MainContent CSS*/
+.mainContainer {
+    background-color: var(--black);
+    flex: 1 1 auto;
+    margin-left: 15%;
+    width: 85%;
+}
+
+.mainContainer .capa {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/bg2.jpg") no-repeat;
+    background-position: top center;
+    background-size: cover;
+    color: var(--light-white);
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: space-around;
+    padding: 0 4%;
+    width: 100%;
+}
+
+.mainContainer .capa .menuCapaTop {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContainer .capa .arrow {
+    display: flex;
+    gap: 5px;
+}
+
+.mainContainer .capa .arrow .arrowItem {
+    background-color: #18181897;
+    border-radius: 18px;
+    cursor: pointer;
+    height: 36px;
+    line-height: 40px;
+    text-align: center;
+    width: 36px;
+}
+
+.mainContainer .capa .arrow .arrowItem i {
+    font-size: 20px;
+}
+
+.mainContainer .menuPerfil {
+    align-items: center;
+    background-color: #18181897;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.mainContainer .menuPerfil img {
+    border-radius: 18px;
+    height: 36px;
+    width: 36px;
+}
+
+.mainContainer .menuCapaTop .menuPerfil span,
+.mainContainer .menuCapaTop .menuPerfil i {
+    font-weight: bolder;
+}
+
+.mainContainer .menuCapaTop .menuPerfil i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.mainContainer .menuPerfil:hover {
+    background-color: var(--light-black);
+}
+
+.mainContainer .capa .capaTitle p {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.mainContainer .capa .capaTitle i {
+    background-color: var(--blue);
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    width: 30px;
+}
+
+.mainContainer .capa .capaTitle h1 {
+    font-size: 90px;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.mainContainer .mainContent {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 3%;
+    width: 100%;
+}
+
+.mainContainer .mainContent .menuContent {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+.mainContainer .mainContent a.btnSeguindo {
+    border: 1px solid var(--light-white);
+    border-radius: 6px;
+    color: var(--gray);
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+}
+
+.mainContainer .mainContent a.btnSeguindo:hover {
+    opacity: 0.7;
+}
+
+.mainContainer .mainContent a.btnCirculo i {
+    color: var(--gray);
+    font-size: 5px;
+}
+
+.mainContainer .mainContent a.btnCirculo:hover {
+    opacity: 0.7;
+}
+
+.mainContainer .mainContent .popularSong {
+    color: var(--light-white);
+    margin-top: 4%;
+}
+
+.mainContent h2 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.mainContent .popularSong ul {
+    margin-bottom: 5px;
+}
+
+.mainContent .popularSong ul li {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 1% 0;
+    padding: 5px 1%;
+}
+
+.mainContent .popularSong ul .tituloMusica {
+    align-items: center;
+    display: flex;
+    font-weight: bolder;
+    gap: 8px;
+    width: 250px;
+}
+
+.mainContent .popularSong ul .qtdOuvintes,
+.mainContent .popularSong ul .tempoMusica {
+    color: var(--gray);
+}
+
+.mainContent .popularSong ul .tituloMusica span:first-of-type {
+    color: var(--gray);
+}
+
+.mainContent .popularSong ul img {
+    height: 40px;
+    width: 40px;
+}
+
+.mainContent .popularSong ul li:hover {
+    background-color: #b3b3b320;
+    border-radius: 4px;
+}
+
+.mainContent .sectionContainer {
+    margin: 2% 0;
+}
+
+.mainContent .tituloSection {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+
+.mainContent .sectionContainer .menuSection {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 3%;
+}
+
+.mainContent .sectionContainer .menuSection a {
+    background-color: var(--light-black);
+    border-radius: 18px;
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 8px 10px;
+}
+
+.mainContent .sectionContainer .menuSection a:first-of-type {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.mainContent .sectionContainer .menuSection a:hover {
+    opacity: 0.8;
+}
+
+.mainContent .sectionContainer .albunsSection {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.mainContent .sectionContainer .albunsSection .cardDisco,
+.mainContent .sectionContainer .albunsSection .cardArtista {
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 15px;
+    position: relative;
+    transition: 0.5s;
+    width: 180px;
+}
+
+.mainContent .sectionContainer .albunsSection .cardDisco img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.mainContent .sectionContainer .albunsSection h3.musicTitle {
+    color: var(--white);
+    font-weight: bolder;
+    font-size: 15px;
+    max-width: 180px;
+    margin-bottom: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mainContent .sectionContainer .albunsSection p {
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.mainContent .sectionContainer .albunsSection .btnHover {
+    bottom: 85px;
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+.mainContent .sectionContainer .albunsSection .cardDisco:hover,
+.mainContent .sectionContainer .albunsSection .cardArtista:hover {
+    background-color: var(--light-black);
+}
+
+.mainContent .sectionContainer .albunsSection .btnHover:hover {
+    display: block;
+}
+
+.mainContent .sectionContainer .albunsSection .cardArtista img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.sectionContainer .containerAbout {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+}
+
+.sectionContainer .containerAbout img {
+    border-radius: 5px;
+    filter: grayscale(100%);
+    transition: transform 1s ease-in-out;
+}
+
+.sectionContainer .containerAbout img:hover {
+    transform: scale(1.1);
+}
+
+.sectionContainer .containerAbout .textAbout {
+    color: var(--white);
+    bottom: 0;
+    font-weight: bolder;
+    padding: 10px 30px;
+    position: absolute;
+    width: 60%;
+    z-index: 1;
+}
+
+.sectionContainer .containerAbout .textAbout p:last-of-type {
+    line-height: 25px;
+    margin: 2% 0;
+}
+
+/*Main Footer*/
+footer {
+    margin-bottom: 10%;
+    padding: 0 2%;
+}
+
+footer .containerFooter {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .containerFooter .containerMenuFooter {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    width: 60%;
+}
+
+footer .containerFooter .containerMenuFooter .menuFooter {
+    padding: 10px;
+    width: calc((100% / 3));
+}
+
+footer .containerFooter .containerMenuFooter h3 {
+    color: var(--light-white);
+    font-weight: bolder;
+    font-size: 16px;
+    margin-bottom: 3%;
+}
+
+footer .containerFooter .containerMenuFooter li {
+    margin: 7% 0;
+}
+
+footer .containerFooter .containerMenuFooter ul a {
+    color: var(--gray);
+    font-weight: bolder;
+}
+
+footer .containerFooter .containerMenuFooter ul a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer .containerFooter .redesSociais {
+    gap: 15px;
+    justify-content: end;
+    display: flex;
+    width: 40%;
+}
+
+footer .containerFooter .redesSociais a {
+    background-color: #b3b3b320;
+    border-radius: 24px;
+    color: var(--light-white);
+    display: inline-block;
+    height: 48px;
+    transition: 0.4s;
+    text-align: center;
+    width: 48px;
+}
+
+footer .containerFooter .redesSociais i {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+footer .containerFooter .redesSociais a:hover {
+    background-color: #b3b3b382;
+}
+
+footer .contentFooter {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+}
+
+footer .contentFooter .linksFooter {
+    width: 70%;
+}
+
+footer .contentFooter .linksFooter a {
+    color: var(--gray);
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0 1%;
+}
+
+footer .contentFooter .linksFooter a:hover {
+    text-decoration: underline;
+}
+
+footer .contentFooter .copyright {
+    color: var(--gray);
+    text-align: right;
+    width: 30%;
+}
+
+/************/
+.musicPlay {
+    align-items: center;
+    background-color: #181818;
+    bottom: 0;
+    border-top: 1px solid var(--light-black);
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0 1%;
+    width: 100%;
+}
+
+.musicPlay .imgMusic {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    width: 20%;
+}
+
+.musicPlay .imgMusic img {
+    height: 60px;
+    width: 60px;
+}
+
+.musicPlay .titleMusic p {
+    color: var(--white);
+}
+
+.musicPlay .titleMusic span {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.musicPlay .iconMusic a {
+    color: var(--gray);
+    font-size: 18px;
+}
+
+.musicPlay .iconMusic a:hover {
+    color: var(--white);
+}
+
+.musicPlay .btnMusic {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 60%;
+}
+
+.musicPlay .btnMusic .iconsPlay {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.musicPlay .btnMusic .iconsPlay i {
+    color: var(--gray);
+    font-size: 18px;
+}
+
+.musicPlay .btnMusic .iconsPlay .btnPlay2 {
+    background-color: var(--light-white);
+    border-radius: 20px;
+    display: inline-block;
+    height: 36px;
+    padding: 11px 0 0 2px;
+    text-align: center;
+    transition: filter 250ms;
+    width: 36px;
+}
+
+.musicPlay .btnMusic .btnPlay2 i {
+    color: var(--black);
+    font-size: 16px;
+}
+
+.musicPlay .btnMusic .iconsPlay a.btnPlay2:hover {
+    filter: brightness(110%);
+    transform: translateY(-1px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.musicPlay .btnMusic .iconsPlay a.btnMusic1 i:hover {
+    color: var(--white);
+}
+
+.musicPlay .containerLinha {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+}
+
+.musicPlay .containerLinha span {
+    color: var(--gray);
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.musicPlay .linha {
+    background-color: var(--gray);
+    height: 2px;
+    position: relative;
+    width: 50%;
+}
+
+.musicPlay .iconsMusic {
+    width: 20%;
+}
+
+.musicPlay .iconsMusic {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+}
+
+.musicPlay .iconsMusic i {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+.musicPlay .iconsMusic i:hover {
+    color: var(--white);
+}
